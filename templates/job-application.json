@@ -1,0 +1,47 @@
+{
+  "name": "job-application",
+  "subject": "Application | {{role}} | {{company}}",
+  "description": "Professional job application email template with resume attachment",
+  "variables": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "Applicant's full name"
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "description": "Applicant's email address"
+    },
+    "recipientName": {
+      "type": "string",
+      "required": true,
+      "description": "Recipient's name (hiring manager/HR)"
+    },
+    "role": {
+      "type": "string",
+      "required": true,
+      "description": "Position/role being applied for"
+    },
+    "company": {
+      "type": "string",
+      "required": true,
+      "description": "Company name"
+    },
+    "experience": {
+      "type": "string",
+      "required": true,
+      "description": "Years of experience"
+    },
+    "skills": {
+      "type": "string",
+      "required": true,
+      "description": "Key skills and technologies"
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true,
+      "description": "Applicant's phone number"
+    }
+  }
+}

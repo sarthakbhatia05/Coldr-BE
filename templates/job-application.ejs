@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Application Email</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        padding: 0;
+        margin: 0;
+      }
+
+      .email-container {
+        max-width: 600px;
+        margin: 30px auto;
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      h2 {
+        margin-bottom: 15px;
+        color: #222;
+      }
+
+      p {
+        line-height: 1.6;
+        margin: 10px 0;
+      }
+
+      .footer {
+        margin-top: 25px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .highlight {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <h2>Hey <%= recipientName || 'there' %>,</h2>
+
+      <p>
+        I am writing to express my keen interest in the
+        <span class="highlight"><%= role || 'Software Engineer' %></span> role at
+        <span class="highlight"><%= company || 'your company' %></span>, which I recently came across.
+      </p>
+
+      <p>
+        With almost <%= experience || '3' %> years of experience in building scalable backend
+        applications with <%= skills || 'modern technologies' %>, I am confident in my ability to contribute
+        effectively to your team.
+      </p>
+
+      <p>
+        My resume is attached for your review, providing further details on my
+        qualifications and experience.
+      </p>
+
+      <p>Thank you! Looking forward to hearing from you soon.</p>
+
+      <div class="footer">
+        <p>Best regards,<br /><%= name || 'Applicant' %><br /><%= phoneNumber || 'Contact information' %></p>
+      </div>
+    </div>
+  </body>
+</html>

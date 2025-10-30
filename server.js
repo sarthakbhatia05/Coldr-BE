@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import multer from "multer";
 import emailRoutes from "./routes/email.routes.js";
+import authRoutes from './routes/auth.routes.js';
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.use(express.static('public'));
 
 // routes
 app.use("/api/email", emailRoutes);
+app.use('/auth', authRoutes);
 
 // Error handling middleware
 app.use((error, req, res, next) => {

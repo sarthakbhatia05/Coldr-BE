@@ -35,4 +35,5 @@ app.use('*', (req, res) => {
   res.status(404).json({ success: false, error: 'Route not found' });
 });
 
-app.listen(5000, () => console.log("✅ Backend running on http://localhost:5000"));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`✅ Backend running on http://localhost:${PORT}`));

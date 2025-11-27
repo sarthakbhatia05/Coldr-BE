@@ -1,6 +1,6 @@
 import express from "express";
 import multer from "multer";
-import { getTemplates, sendEmail } from "../controller/email.controller.js";
+import { getTemplates, sendEmail, testAI, generateEmailContent } from "../controller/email.controller.js";
 
 const router = express.Router();
 
@@ -21,6 +21,8 @@ const upload = multer({
 });
 
 router.get("/templates", getTemplates);
+router.post("/generate", generateEmailContent);
 router.post("/send", upload.single('resume'), sendEmail);
+router.post("/test-ai", testAI);
 
 export default router;

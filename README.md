@@ -4,7 +4,7 @@ A simple cold-email application consisting of a Backend (Express, Nodemailer) an
 
 This repository contains two folders:
 - `Backend` — Express server that serves templates and sends emails using Nodemailer.
-- `Frontend` — React app (Vite) for the UI.
+- `Frontend` — React app (Vite) for the UI
 
 ## Contents
 

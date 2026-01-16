@@ -3,10 +3,12 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import multer from "multer";
+import { loadFromSSM } from "./utils/loadEnv.js";
 import emailRoutes from "./routes/email.routes.js";
 import authRoutes from './routes/auth.routes.js';
 
 dotenv.config();
+await loadFromSSM();
 
 const app = express();
 app.use(cors());

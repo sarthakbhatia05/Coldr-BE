@@ -17,6 +17,7 @@
   "license": "ISC",
   "description": "A cold email application using Express and Nodemailer",
   "dependencies": {
+    "@aws-sdk/client-ssm": "^3.500.0",
     "@google/generative-ai": "^0.24.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",

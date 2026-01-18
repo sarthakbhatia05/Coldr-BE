@@ -8,7 +8,19 @@ import emailRoutes from "./routes/email.routes.js";
 import authRoutes from './routes/auth.routes.js';
 
 dotenv.config();
-await loadFromSSM();
+
+// Only load from SSM in production (on EC2)
+if (process.env.NODE_ENV !== 'local') {
+  try {
+    await loadFromSSM();
+    console.log('✅ Loaded environment variables from AWS SSM');
+  } catch (error) {
+    console.error('⚠️  Failed to load from SSM, using .env file:', error.message);
+  }
+} else {
+  console.log('🔧 Running in development mode, using .env file');
+}
+
 
 const app = express();
 app.use(cors());
